@@ -15,12 +15,13 @@ namespace AnugComp
                 .Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
                 .Skip(1)
                 .Select(line => line.Split('\t'))
-                .Select(cells => new
+                .Select((cells, index) => new
                 {
                     Name = cells[0],
                     Title = cells[2],
                     Host = cells[3],
-                    Profile = cells[8]
+                    Profile = cells[8],
+                    n = index + 1
                 });
 
             Console.WriteLine(formatter.FormatObjects(objects));
