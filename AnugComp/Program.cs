@@ -11,7 +11,7 @@ namespace AnugComp
         {
             var formatter = new TableFormatter(new Hints { CollapseVerticallyWhenSingleLine = true, MaxTableWidth = 120 });
 
-            var objects = File.ReadAllText("Serverless_computing_-_the_most_fluffy_cloud.xls")
+            var objects = File.ReadAllText("ASP.NET_without_Razor_React_Webpack_and_TypeScript.xls")
                 .Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
                 .Skip(1) //< skip column names
                 .Select(line => line.Split('\t'))

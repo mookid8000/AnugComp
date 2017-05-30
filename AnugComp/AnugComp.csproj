@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ASP.NET_without_Razor_React_Webpack_and_TypeScript.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Serverless_computing_-_the_most_fluffy_cloud.xls">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
