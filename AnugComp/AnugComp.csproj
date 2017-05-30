@@ -6,7 +6,7 @@
 	<PropertyGroup>
 		<RootNamespace>AnugComp</RootNamespace>
 		<AssemblyName>AnugComp</AssemblyName>
-		<TargetFrameworks>net45</TargetFrameworks>
+		<TargetFrameworks>netstandard16</TargetFrameworks>
 		<ApplicationIcon />
 		<OutputTypeEx>exe</OutputTypeEx>
 		<StartupObject />
