@@ -10,21 +10,20 @@ namespace AnugComp
         {
             var list = elements.ToList();
             var random = new Random(DateTime.Now.GetHashCode());
-            var iterations = list.Count;
+            var iterations = list.Count * 2;
 
-            Action swapElements = () =>
+            int GetRandomIndex() => random.Next(list.Count);
+
+            void SwapElements()
             {
-                var index1 = random.Next(list.Count);
-                var index2 = random.Next(list.Count);
-                var elem1 = list[index1];
-                var elem2 = list[index2];
-                list[index2] = elem1;
-                list[index1] = elem2;
-            };
+                var (index1, index2) = (GetRandomIndex(), GetRandomIndex());
+
+                (list[index2], list[index1]) = (list[index1], list[index2]);
+            }
 
             while (iterations-- > 0)
             {
-                swapElements();
+                SwapElements();
             }
 
             return list;
