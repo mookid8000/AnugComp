@@ -13,7 +13,7 @@ namespace AnugComp
 
             var objects = File.ReadAllText("Serverless_computing_-_the_most_fluffy_cloud.xls")
                 .Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
-                .Skip(1)
+                .Skip(1) //< skip column names
                 .Select(line => line.Split('\t'))
                 .Select((cells, index) => new
                 {
