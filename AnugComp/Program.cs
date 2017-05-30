@@ -13,7 +13,7 @@ namespace AnugComp
 
             var objects = File.ReadAllText("ASP.NET_without_Razor_React_Webpack_and_TypeScript.xls")
                 .Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
-                .Skip(1) //< skip column names
+                .Skip(1) //< skip column headers
                 .Select(line => line.Split('\t'))
                 .Select((cells, index) => new
                 {
@@ -24,7 +24,9 @@ namespace AnugComp
                     n = index + 1
                 });
 
-            Console.WriteLine(formatter.FormatObjects(objects));
+            var text = formatter.FormatObjects(objects);
+
+            Console.WriteLine(text);
         }
     }
 }
